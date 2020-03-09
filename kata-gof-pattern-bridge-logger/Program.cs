@@ -4,7 +4,7 @@ namespace gof_pattern_bridge_logger
 {
     public class Program
     {
-        public static ILogger Logger { get; set; } = new Logger();
+        public static Logger Logger { get; set; } = new SyncLogger();
 
         public static void Main(string[] args)
         {

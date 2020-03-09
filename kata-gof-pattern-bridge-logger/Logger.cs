@@ -2,28 +2,22 @@
 
 namespace gof_pattern_bridge_logger
 {
-    class Logger : ILogger
+    public abstract class Logger
     {
-        private IMessageStore _messageStore;
+        protected IMessageStore _messageStore;
 
-        public Logger()
+        protected Logger()
             : this(new MemoryStore())
         {
         }
 
-        public Logger(IMessageStore messageStore)
+        protected Logger(IMessageStore messageStore)
         {
             _messageStore = messageStore;
         }
 
-        public void Log(string message)
-        {
-            _messageStore.Add(message);
-        }
+        public abstract void Log(string message);
 
-        public IList<string> GetAllMessages()
-        {
-            return _messageStore.GetAllMessages();
-        }
+        public abstract IList<string> GetAllMessages();
     }
 }

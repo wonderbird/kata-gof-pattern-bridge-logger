@@ -2,7 +2,7 @@
 
 namespace gof_pattern_bridge_logger
 {
-    interface IMessageStore
+    public interface IMessageStore
     {
         void Add(string message);
         IList<string> GetAllMessages();

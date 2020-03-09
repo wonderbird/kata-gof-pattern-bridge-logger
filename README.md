@@ -13,5 +13,9 @@
 
 ### To facilitate decoupling of Log Message recording from Log Message storing, ...
 
-* ... an "async" Logger shall use an asynchronous way of storing the log messages
+Create a test verifying that the synchronous logger only returns after the log message has been persisted.
+
+* ... an "async" Logger shall use an asynchronous way of storing the log messages. Ensure this behavior in a test.
 * ... the user can select the "old, synchrounous" Logger so that she can debug her application easily
+
+Ensure that the object persisting the log messages is declared and defined in the abstract parent class of the async and synchronous loggers. Avoid duplicated code.

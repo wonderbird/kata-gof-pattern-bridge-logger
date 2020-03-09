@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace gof_pattern_bridge_logger
 {
-    internal class AsyncLogger : ILogger
+    public class AsyncLogger : Logger
     {
-        public void Log(string message)
+        public override void Log(string message)
         {
             throw new NotImplementedException();
         }
 
-        public IList<string> GetAllMessages()
+        public override IList<string> GetAllMessages()
         {
             throw new NotImplementedException();
         }
