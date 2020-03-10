@@ -19,5 +19,6 @@ namespace gof_pattern_bridge_logger
         public abstract void Log(string message);
 
         public abstract IList<string> GetAllMessages();
+        public abstract void Flush();
     }
 }

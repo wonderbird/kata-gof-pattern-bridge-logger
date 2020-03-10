@@ -11,6 +11,7 @@ namespace gof_pattern_bridge_logger
             Logger.Log("Hello World!");
             Logger.Log("Hello, Stefan");
 
+            Logger.Flush();
             var messages = Logger.GetAllMessages();
             foreach (var message in messages)
                 Console.WriteLine(message);

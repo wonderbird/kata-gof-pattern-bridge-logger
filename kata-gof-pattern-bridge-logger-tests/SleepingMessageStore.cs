@@ -8,6 +8,7 @@ namespace kata_gof_pattern_bridge_logger_tests
     public class SleepingMessageStore : IMessageStore
     {
         private readonly TimeSpan _delay;
+        private List<string> _messages = new List<string>();
 
         public SleepingMessageStore(TimeSpan delay)
         {
@@ -17,11 +18,12 @@ namespace kata_gof_pattern_bridge_logger_tests
         public void Add(string message)
         {
             Thread.Sleep(_delay);
+            _messages.Add(message);
         }
 
         public IList<string> GetAllMessages()
         {
-            throw new NotImplementedException();
+            return _messages;
         }
     }
 }

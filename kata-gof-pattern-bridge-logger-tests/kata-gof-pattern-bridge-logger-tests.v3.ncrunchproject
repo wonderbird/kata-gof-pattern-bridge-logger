@@ -1,10 +1,5 @@
 ﻿<ProjectConfiguration>
   <Settings>
     <HiddenComponentWarnings />
-    <IgnoredTests>
-      <NamedTestSelector>
-        <TestName>kata_gof_pattern_bridge_logger_tests.AsyncLoggerTests.Log_MessageStoreAddWithDelay_ReturnsAfterDelay</TestName>
-      </NamedTestSelector>
-    </IgnoredTests>
   </Settings>
 </ProjectConfiguration>

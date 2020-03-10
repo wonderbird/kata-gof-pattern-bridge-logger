@@ -23,5 +23,9 @@ namespace gof_pattern_bridge_logger
         {
             return _messageStore.GetAllMessages();
         }
+
+        public override void Flush()
+        {
+        }
     }
 }
