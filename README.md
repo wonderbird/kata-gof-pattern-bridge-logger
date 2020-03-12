@@ -2,9 +2,12 @@
 
 In this kata you implement the Gang Of Four Bridge Pattern [[1](#ref-1), [2](#ref-2), [3](#ref-3)].
 
-You want to implement a log message system. The application creates an instance `logger`. The `logger.Log` method takes a message (string) and stores it in a message stores.
+You task is to implement a logging system. To log messages, an application creates a `logger` instance. The `logger.Log` method takes a `string` message and stores it in a message store. A `logger.GetAllMessages` method retrieves all messages stored so far.
 
-Your goal is to allow the application to easily combine different message stores with different approaches of sending the messages to the message store. Further details are given in the Requirements section below.
+The goal is to allow the application to select one of different message stores and to select one of different approaches of sending the messages to the message store. The design shall allow for developing the message stores and the logging mechanisms independently from each other, e.g. by two different teams. Further details are given in the Requirements section below.
+
+The following diagram shows the resulting bridge pattern:
+![Class Diagram of the Bridge Pattern](BridgePattern.png)
 
 ## Requirements
 
@@ -33,7 +36,9 @@ To facilitate decoupling of Log Message recording from Log Message storing, ...
 
 ## Finishing Touches
 
-Ensure that the object persisting the log messages is declared and defined in the abstract parent class of the async and synchronous loggers. Avoid duplicated code.
+- Ensure that the object persisting the log messages is declared and defined in the abstract parent class of the async and synchronous loggers.
+- Avoid duplicated code.
+- Fix all static code analysis warnings.
 
 ## References
 
