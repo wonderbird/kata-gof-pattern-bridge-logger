@@ -37,7 +37,7 @@ To facilitate decoupling of Log Message recording from Log Message storing, ...
 ## Finishing Touches
 
 - Ensure that the object persisting the log messages is declared and defined in the abstract parent class of the async and synchronous loggers.
-- Avoid duplicated code.
+- Avoid duplicated code (use `tools\dupfinder.bat`).
 - Fix all static code analysis warnings.
 
 ## References

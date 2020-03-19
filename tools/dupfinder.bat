@@ -21,5 +21,6 @@ REM For detailed information see ReSharper Command Line Tools:
 REM https://www.jetbrains.com/help/resharper/dupFinder.html
 REM
 
-dupfinder --exclude="kata-gof-pattern-bridge-logger\obj\**" --discard-cost=50 --discard-literals=true --show-text --o=dupfinder-report.xml --caches-home=c:\temp\dupfinder-cache kata-gof-pattern-bridge-logger.sln
+set PROJECT_NAME=kata-gof-builder-pattern-shop-order-completion
+dupfinder --exclude="%PROJECT_NAME%\obj\**" --discard-cost=50 --discard-literals=true --show-text --o=dupfinder-report.xml --caches-home=c:\temp\dupfinder-cache "%PROJECT_NAME%.sln"
 tools\msxsl.exe "dupfinder-report.xml" "tools\dupfinder.xslt" -o "dupfinder-report.html"
